@@ -22,8 +22,8 @@ import { reactive, effect, ref } from 'vue';
 const state = reactive({ arr: [1, 2, 3] });
 const a = ref(123);
 const handleClick = () => {
-  state.arr = [123];
-  // a.value = a.value + 1;
+  // state.arr = [123];
+  a.value = a.value + 1;
 };
 
 effect(() => {
