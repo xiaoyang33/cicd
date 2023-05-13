@@ -23,7 +23,7 @@ jobs:
       - name: 上传阿里云
         uses: easingthemes/ssh-deploy@main
         env:
-            # 私钥
+            # ssh私钥
             SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
             # 用户
             REMOTE_USER: ${{ secrets.SSH_USERNAME }}
