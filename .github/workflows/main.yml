@@ -7,7 +7,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: 迁出代码
+        uses: actions/checkout@v2
+        
+      - name: 安装 nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: 安装依赖
+        run: npm install
 
       - name: Run a one-line script
         run: echo "Hello, world!"
