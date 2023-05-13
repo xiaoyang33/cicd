@@ -33,6 +33,6 @@ jobs:
             ARGS: '-avzr --delete'
             # 源目录本地目录
             SOURCE: './dist'
-            # 目标地址
+            # 服务器项目目录
             TARGET: '/www/wwwroot/demo/'
 
