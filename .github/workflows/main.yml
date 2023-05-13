@@ -24,8 +24,8 @@ jobs:
             SSH_PRIVATE_KEY: ${{ secrets.ALIROOT }}
             # scp参数
             ARGS: '-avzr --delete'
-            # 源目录
-            SOURCE: './'
+            # 源目录本地目录
+            SOURCE: './dist'
             # 服务器ip：换成你的服务器IP
             REMOTE_HOST: ${{ secrets.ALIROOTHOST }}
             # 用户
