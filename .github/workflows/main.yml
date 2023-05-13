@@ -18,20 +18,18 @@ jobs:
         run: npm install
         
       - name: 上传阿里云
-        uses: easingthemes/ssh-deploy@v2.1.1
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
-                  # 私钥
-                  SSH_PRIVATE_KEY: ${{ secrets.ALIROOT }}
-                  # scp参数
-                  ARGS: '-avzr --delete'
-                  # 源目录
-                  SOURCE: 'dist'
-                  # 服务器ip：换成你的服务器IP
-                  REMOTE_HOST: ${{ secrets.ALIROOTHOST }}
-                  # 用户
-                  REMOTE_USER: 'root'
-                  # 目标地址
-                  TARGET: '/www/wwwroot/xxlb.site'
+            # 私钥
+            SSH_PRIVATE_KEY: ${{ secrets.ALIROOT }}
+            # scp参数
+            ARGS: '-avzr --delete'
+            # 源目录
+            SOURCE: './'
+            # 服务器ip：换成你的服务器IP
+            REMOTE_HOST: ${{ secrets.ALIROOTHOST }}
+            # 用户
+            REMOTE_USER: 'root'
+            # 目标地址
+            TARGET: '/www/wwwroot/demo'
 
-      - name: Run a one-line script
-        run: echo "Hello, world!"
