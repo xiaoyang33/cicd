@@ -21,6 +21,10 @@ export default defineConfig((config: ConfigEnv) => {
         resolvers: [ElementPlusResolver()]
       })
     ],
+    build: {
+      outDir: './dist/cide'
+    },
+
     server: {
       port: 8001
     },

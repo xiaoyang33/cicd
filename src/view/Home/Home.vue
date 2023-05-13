@@ -11,7 +11,7 @@
     <div class="point"></div>
   </div> -->
   <HelloWorld msg="Vite + Vue" />
-  <button @click="handleClick">点击</button>
+  <button @click="handleClick">点击22</button>
   <div>{{ state.arr }}</div>
   <div>{{ a }}</div>
 </template>
