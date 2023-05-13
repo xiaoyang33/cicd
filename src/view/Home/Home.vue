@@ -7,13 +7,14 @@
       <img src="~@/assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  CICD SUCCESS
   <!-- <div class="ball">
     <div class="point"></div>
   </div> -->
   <HelloWorld msg="Vite + Vue" />
-  <button @click="handleClick">点击22</button>
+  <!-- <button @click="handleClick">点击22</button>
   <div>{{ state.arr }}</div>
-  <div>{{ a }}</div>
+  <div>{{ a }}</div> -->
 </template>
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue';
