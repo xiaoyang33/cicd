@@ -16,6 +16,23 @@ jobs:
           node-version: "14"
       - name: 安装依赖
         run: npm install
+        
+      - name: 打包
+        run: npm run build
+        
+      - name: 上传阿里云
+        uses: easingthemes/ssh-deploy@main
+        env:
+            # ssh私钥
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+            # 用户
+            REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+            # 服务器ip：换成你的服务器IP
+            REMOTE_HOST: ${{ secrets.SSH_HOST }}
+            # scp参数
+            ARGS: '-avzr --delete'
+            # 源目录本地目录
+            SOURCE: './dist'
+            # 服务器项目目录
+            TARGET: '/www/wwwroot/demo/'
 
-      - name: Run a one-line script
-        run: echo "Hello, world!"
