@@ -21,9 +21,7 @@ export default defineConfig((config: ConfigEnv) => {
         resolvers: [ElementPlusResolver()]
       })
     ],
-    build: {
-      outDir: './dist/cide'
-    },
+    base: '/cicd/',
 
     server: {
       port: 8001
